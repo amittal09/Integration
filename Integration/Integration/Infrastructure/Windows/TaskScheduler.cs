@@ -11,7 +11,7 @@ namespace Vertica.Integration.Infrastructure.Windows
 
 		public TaskScheduler(string machineName = null)
 		{
-			//this._taskService = (TaskScheduler)Activator.CreateInstance(Marshal.GetTypeFromCLSID(new Guid("0F87369F-A4E5-4CFC-BD3E-73E6154572DD")));
+			this._taskService = (ITaskService)Activator.CreateInstance(Marshal.GetTypeFromCLSID(new Guid("0F87369F-A4E5-4CFC-BD3E-73E6154572DD")));
 			if (string.IsNullOrWhiteSpace(machineName))
 			{
 				this._taskService.Connect(Type.Missing, Type.Missing, Type.Missing, Type.Missing);
