@@ -12,9 +12,9 @@ namespace ConsoleApplication
     {
         static void Main(string[] args)
         {
+            //Dummy Check in
             var application = ApplicationContext.Create(_application => _application.
             Database(database => database.IntegrationDb(ConnectionString.FromName("default"))));
-            
             
         }
     }
